@@ -219,7 +219,7 @@ class ASTGeneration(MT22Visitor):
         if ctx.STRINGLIT():
             return StringLit(ctx.STRINGLIT().getText())
         elif ctx.FLOAT():
-            return FloatLit(ctx.FLOAT().getText())
+            return FloatLit(float(ctx.FLOAT().getText()))
         elif ctx.INTEGER():
             return IntegerLit(ctx.INTEGER().getText())
         elif ctx.BOOLEAN():
